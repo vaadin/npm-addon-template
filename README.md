@@ -1,6 +1,8 @@
-= game-card
+# Game Card
 
-== Development instructions
+Vaadin 10 Java integration of https://github.com/vpusher/game-card
+
+## Development instructions
 
 Starting the test/demo server:
 ```
