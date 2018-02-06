@@ -10,7 +10,7 @@
     <description>Integration of game-card for Vaadin 10</description>
 
     <properties>
-        <vaadin.version>10.0.0.alpha12</vaadin.version>
+        <vaadin.version>10.0.0.alpha16</vaadin.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -64,15 +64,16 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.24</version>
         </dependency>
         <!-- The following dependency is generated using webjars.org. If 
-             it does not resolve, please go to https://www.webjars.org/, 
-             select "Add a WebJar", Select "Bower" and enter the URL "https://github.com/vpusher/game-card" 
-             and the version "v1.0.6" -->
+             it does not resolve, you can generate it using the webjars.org
+             REST API, e.g. using curl:
+
+             curl -X POST "https://www.webjars.org/deploy?webJarType=BowerGitHub&nameOrUrlish=https://github.com/vpusher/game-card&version=v1.0.6"
+             -->
         <dependency>
-            <groupId>org.webjars.bower</groupId>
-            <artifactId>github-com-vpusher-game-card</artifactId>
+            <groupId>org.webjars.bowergithub.vpusher</groupId>
+            <artifactId>game-card</artifactId>
             <version>1.0.6</version>
         </dependency>
     </dependencies>
