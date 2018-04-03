@@ -66,10 +66,7 @@
             <artifactId>slf4j-simple</artifactId>
         </dependency>
         <!-- The following dependency is generated using webjars.org. If 
-             it does not resolve, you can generate it using the webjars.org
-             REST API, e.g. using curl:
-
-             curl -X POST "https://www.webjars.org/deploy?webJarType=BowerGitHub&nameOrUrlish=https://github.com/vpusher/game-card&version=v1.0.6"
+             it does not resolve, go to https://www.webjars.org and deploy it as "Bower GitHub"
              -->
         <dependency>
             <groupId>org.webjars.bowergithub.vpusher</groupId>
