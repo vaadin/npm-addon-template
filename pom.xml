@@ -64,6 +64,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
+            <scope>test</scope>
         </dependency>
         <!-- The following dependency is generated using webjars.org. If 
              it does not resolve, go to https://www.webjars.org and deploy it as "Bower GitHub"
