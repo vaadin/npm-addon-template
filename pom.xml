@@ -84,11 +84,10 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
+                <version>3.1.0</version>
                 <configuration>
                     <archive>
                         <index>true</index>
@@ -106,12 +105,15 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.7.v20160115</version>
+                <version>9.4.11.v20180605</version>
                 <configuration>
                     <scanIntervalSeconds>-1</scanIntervalSeconds>
                     <!-- Use test scope because the UI/demo classes are in 
                         the test package. -->
                     <useTestScope>true</useTestScope>
+                    <supportedPackagings>
+                    <supportedPackaging>jar</supportedPackaging>
+                    </supportedPackagings>
                     <webAppConfig>
                         <!-- This is only needed to be able to unzip webjars 
                             directly into src/test/webjar-debug and modify them for testing -->
@@ -130,7 +132,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <version>2.6</version>
+                        <version>3.1.0</version>
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
@@ -163,7 +165,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
+                        <version>3.0.1</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
