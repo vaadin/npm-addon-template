@@ -1,0 +1,5 @@
+.idea
+node_modules
+src/main/webapp/build/stats.json
+target
+*.iml
