@@ -1,4 +1,5 @@
 import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import './game-card.js';
 import './game-card-placeholder.js';
 
@@ -14,7 +15,7 @@ Example:
 */
 
 
-class GameCardPile extends Polymer.Element {
+class GameCardPile extends PolymerElement {
   static get template() {
     return html`
         <style>

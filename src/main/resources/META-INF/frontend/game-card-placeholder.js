@@ -1,4 +1,5 @@
 import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import './game-card.js';
 
 /*`<game-card-placeholder>` is a placeholder element for game cards.
@@ -11,7 +12,7 @@ Example:
 */
 
 
-class GameCardPlaceholder extends Polymer.Element {
+class GameCardPlaceholder extends PolymerElement {
 
   static get template() {
     return html`

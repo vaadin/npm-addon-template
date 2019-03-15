@@ -217,7 +217,7 @@
                                     <goal>update-imports</goal>
                                 </goals>
                                 <configuration>
-                                    <jsFile>frontend/main.js</jsFile>
+                                    <jsFile>src/main/resources/META-INF/frontend/main.js</jsFile>
                                     <convertHtml>false</convertHtml>
                                 </configuration>
                             </execution>
