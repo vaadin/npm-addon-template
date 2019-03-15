@@ -3,3 +3,4 @@ node_modules
 src/main/webapp/build/stats.json
 target
 *.iml
+src/main/resources/META-INF/frontend/main.js

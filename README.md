@@ -1,12 +1,15 @@
 # Game Card
 
-Vaadin 10 Java integration of https://github.com/vpusher/game-card
+Vaadin 14 Java integration of https://github.com/vpusher/game-card
 
 ## Development instructions
 
+Any JavaScript modules should be put in `src/main/resources/META-INF/frontent`
+so that they are automatically found and copied in the using application.
+
 Starting the test/demo server:
 ```
-mvn jetty:run
+mvn jetty:run -P demo
 ```
 
 This deploys demo at http://localhost:8080
