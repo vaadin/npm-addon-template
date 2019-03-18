@@ -7,6 +7,9 @@ import com.vaadin.flow.router.Route;
 public class DemoView extends Div {
 
     public DemoView() {
-        add(new GameCard());
+        GameCard gameCard = new GameCard();
+        gameCard.setSymbol(GameCard.Symbol.HEART);
+        gameCard.setRank(GameCard.Rank.ACE);
+        add(gameCard);
     }
 }

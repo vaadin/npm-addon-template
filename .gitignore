@@ -1,0 +1,11 @@
+# Built and downloaded folders
+node_modules
+target
+
+# Generated files
+src/main/webapp/build/stats.json
+src/main/resources/META-INF/frontend/main.js
+
+# Intellij Idea
+.idea
+*.iml
