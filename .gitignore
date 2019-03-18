@@ -1,6 +1,11 @@
-.idea
+# Built and downloaded folders
 node_modules
-src/main/webapp/build/stats.json
 target
-*.iml
+
+# Generated files
+src/main/webapp/build/stats.json
 src/main/resources/META-INF/frontend/main.js
+
+# Intellij Idea
+.idea
+*.iml
