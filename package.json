@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@polymer/polymer": "3.1.0",
+    "@vaadin/vaadin-app-layout": "2.0.0",
     "@webcomponents/webcomponentsjs": "^2.2.7"
   },
   "devDependencies": {

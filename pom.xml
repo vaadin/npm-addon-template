@@ -10,7 +10,7 @@
     <description>Integration of game-card for Vaadin platform</description>
 
     <properties>
-        <vaadin.version>13.0-SNAPSHOT</vaadin.version>
+        <vaadin.version>14.0-SNAPSHOT</vaadin.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -54,12 +54,6 @@
             <id>vaadin-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
         </repository>
-        <!-- The bintray repository contain webjars immediately after generation. If the webjar is available
-             in Maven central, you do not need this repository -->
-        <repository>
-            <id>webjars</id>
-            <url>https://dl.bintray.com/webjars/maven</url>
-        </repository>
     </repositories>
 
     <dependencies>
@@ -88,14 +82,6 @@
             <artifactId>slf4j-simple</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- The following dependency is generated using webjars.org. If 
-             it does not resolve, go to https://www.webjars.org and deploy it as "Bower GitHub"
-             -->
-        <!--<dependency>-->
-            <!--<groupId>org.webjars.bowergithub.vpusher</groupId>-->
-            <!--<artifactId>game-card</artifactId>-->
-            <!--<version>1.0.6</version>-->
-        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -115,25 +101,6 @@
                             <Vaadin-Package-Version>1</Vaadin-Package-Version>
                         </manifestEntries>
                     </archive>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <filesets>
-                        <fileset>
-                            <directory>src/main/webapp/build</directory>
-                        </fileset>
-                        <fileset>
-                            <directory>src/main/resources/META-INF/frontend/</directory>
-                            <includes>
-                                <include>main.js</include>
-                            </includes>
-                        </fileset>
-                    </filesets>
                 </configuration>
             </plugin>
         </plugins>
@@ -227,11 +194,10 @@
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>update-npm-dependencies</goal>
-                                    <goal>update-imports</goal>
+                                    <goal>validate</goal>
+                                    <goal>build-frontend</goal>
                                 </goals>
                                 <configuration>
-                                    <jsFile>src/main/resources/META-INF/frontend/main.js</jsFile>
                                     <convertHtml>false</convertHtml>
                                 </configuration>
                             </execution>
