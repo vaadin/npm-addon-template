@@ -74,7 +74,7 @@
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-core</artifactId>
+            <artifactId>vaadin</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
