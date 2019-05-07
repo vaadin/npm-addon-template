@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@polymer/polymer": "3.1.0",
+    "@vaadin/vaadin-app-layout": "2.0.0",
+    "@webcomponents/webcomponentsjs": "^2.2.7"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.1",
+    "webpack": "^4.29.6",
+    "webpack-babel-multi-target-plugin": "^2.1.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}

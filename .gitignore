@@ -1,0 +1,10 @@
+# Built and downloaded folders
+node_modules
+target
+
+# Intellij Idea
+.idea
+*.iml
+
+# Eclipse
+.project
