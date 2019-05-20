@@ -17,6 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.plugin.jetty.version>9.4.15.v20190215</maven.plugin.jetty.version>
+
+        <server.port>8080</server.port>
+        <rootOutputDir>${basedir}/target</rootOutputDir>
     </properties>
     <organization>
         <name>###author###</name>
@@ -175,6 +178,9 @@
                         <artifactId>jetty-maven-plugin</artifactId>
                         <version>${maven.plugin.jetty.version}</version>
                         <configuration>
+                            <httpConnector>
+                                <port>${server.port}</port>
+                            </httpConnector>
                             <scanIntervalSeconds>-1</scanIntervalSeconds>
                             <!-- Use test scope because the UI/demo classes are in
                                 the test package. -->
@@ -214,6 +220,9 @@
                         <artifactId>jetty-maven-plugin</artifactId>
                         <version>${maven.plugin.jetty.version}</version>
                         <configuration>
+                            <httpConnector>
+                                <port>${server.port}</port>
+                            </httpConnector>
                             <scanIntervalSeconds>-1</scanIntervalSeconds>
                             <!-- Use test scope because the UI/demo classes are in
                                 the test package. -->
@@ -243,6 +252,33 @@
                     </plugin>
 
                     <plugin>
+                        <groupId>com.lazerycode.selenium</groupId>
+                        <artifactId>driver-binary-downloader-maven-plugin</artifactId>
+                        <version>1.0.14</version>
+                        <configuration>
+                            <onlyGetDriversForHostOperatingSystem>true
+                            </onlyGetDriversForHostOperatingSystem>
+                            <rootStandaloneServerDirectory>
+                                ${rootOutputDir}/driver
+                            </rootStandaloneServerDirectory>
+                            <downloadedZipFileDirectory>
+                                ${rootOutputDir}/driver_zips
+                            </downloadedZipFileDirectory>
+                            <customRepositoryMap>
+                                ${basedir}/drivers.xml
+                            </customRepositoryMap>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>selenium</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>2.20</version>
@@ -258,8 +294,11 @@
                             <trimStackTrace>false</trimStackTrace>
                             <enableAssertions>true</enableAssertions>
                             <systemPropertyVariables>
+                                <serverPort>${server.port}</serverPort>
                                 <!-- Pass location of downloaded webdrivers to the tests -->
-                                <webdriver.chrome.driver>${webdriver.chrome.driver}</webdriver.chrome.driver>
+                                <webdriver.chrome.driver>
+                                    ${webdriver.chrome.driver}
+                                </webdriver.chrome.driver>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
