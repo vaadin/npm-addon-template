@@ -18,8 +18,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.plugin.jetty.version>9.4.15.v20190215</maven.plugin.jetty.version>
 
-        <server.port>8080</server.port>
-        <rootOutputDir>${basedir}/target</rootOutputDir>
+        <drivers.dir>${project.basedir}/drivers</drivers.dir>
+        <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
     </properties>
     <organization>
         <name>###author###</name>
@@ -253,24 +253,26 @@
 
                     <plugin>
                         <groupId>com.lazerycode.selenium</groupId>
-                        <artifactId>driver-binary-downloader-maven-plugin</artifactId>
-                        <version>1.0.14</version>
+                        <artifactId>driver-binary-downloader-maven-plugin
+                        </artifactId>
+                        <version>1.0.17</version>
                         <configuration>
-                            <onlyGetDriversForHostOperatingSystem>true
+                            <onlyGetDriversForHostOperatingSystem>
+                                true
                             </onlyGetDriversForHostOperatingSystem>
                             <rootStandaloneServerDirectory>
-                                ${rootOutputDir}/driver
+                                ${drivers.dir}/driver
                             </rootStandaloneServerDirectory>
                             <downloadedZipFileDirectory>
-                                ${rootOutputDir}/driver_zips
+                                ${drivers.dir}/driver_zips
                             </downloadedZipFileDirectory>
                             <customRepositoryMap>
-                                ${basedir}/drivers.xml
+                                ${project.basedir}/drivers.xml
                             </customRepositoryMap>
                         </configuration>
                         <executions>
                             <execution>
-                                <phase>pre-integration-test</phase>
+                                <phase>${drivers.downloader.phase}</phase>
                                 <goals>
                                     <goal>selenium</goal>
                                 </goals>
