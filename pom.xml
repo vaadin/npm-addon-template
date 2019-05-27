@@ -189,6 +189,8 @@
                             <supportedPackagings>
                                 <supportedPackaging>jar</supportedPackaging>
                             </supportedPackagings>
+                            <stopKey>${project.artifactId}</stopKey>
+                            <stopPort>8081</stopPort>
                         </configuration>
                     </plugin>
 
@@ -199,7 +201,7 @@
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>validate</goal>
+                                    <goal>prepare-frontend</goal>
                                     <goal>build-frontend</goal>
                                 </goals>
                                 <configuration>
@@ -212,6 +214,20 @@
             </build>
         </profile>
 
+        <!-- Run (demo) in production mode-->
+        <profile>
+            <id>production</id>
+            <properties>
+                <vaadin.productionMode>true</vaadin.productionMode>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-server-production-mode</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
         <profile>
             <id>integration-tests</id>
             <build>
@@ -219,21 +235,6 @@
                     <plugin>
                         <groupId>org.eclipse.jetty</groupId>
                         <artifactId>jetty-maven-plugin</artifactId>
-                        <version>${maven.plugin.jetty.version}</version>
-                        <configuration>
-                            <httpConnector>
-                                <port>${server.port}</port>
-                            </httpConnector>
-                            <scanIntervalSeconds>-1</scanIntervalSeconds>
-                            <!-- Use test scope because the UI/demo classes are in
-                                the test package. -->
-                            <useTestScope>true</useTestScope>
-                            <supportedPackagings>
-                                <supportedPackaging>jar</supportedPackaging>
-                            </supportedPackagings>
-                            <stopKey>${project.artifactId}</stopKey>
-                            <stopPort>8081</stopPort>
-                        </configuration>
                         <executions>
                             <execution>
                                 <id>start-jetty</id>
