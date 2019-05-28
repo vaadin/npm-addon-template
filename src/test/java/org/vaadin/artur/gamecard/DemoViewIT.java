@@ -12,5 +12,9 @@ public class DemoViewIT extends AbstractViewTest {
         final TestBenchElement card = $("game-card").first();
         Assert.assertEquals("♥", card.getAttribute("symbol"));
         Assert.assertEquals("A", card.getAttribute("rank"));
+        final TestBenchElement rankSymbol = card.$("span")
+                .attributeContains("class", "rank-symbol")
+                .first();
+        Assert.assertEquals("♥", rankSymbol.getText());
     }
 }
