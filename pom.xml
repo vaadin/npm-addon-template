@@ -178,9 +178,6 @@
                         <artifactId>jetty-maven-plugin</artifactId>
                         <version>9.4.15.v20190215</version>
                         <configuration>
-                            <httpConnector>
-                                <port>${server.port}</port>
-                            </httpConnector>
                             <scanIntervalSeconds>-1</scanIntervalSeconds>
                             <!-- Use test scope because the UI/demo classes are in
                                 the test package. -->
@@ -297,7 +294,6 @@
                             <trimStackTrace>false</trimStackTrace>
                             <enableAssertions>true</enableAssertions>
                             <systemPropertyVariables>
-                                <serverPort>${server.port}</serverPort>
                                 <!-- Pass location of downloaded webdrivers to the tests -->
                                 <webdriver.chrome.driver>
                                     ${webdriver.chrome.driver}
