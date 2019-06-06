@@ -10,11 +10,10 @@ public class DemoViewIT extends AbstractViewTest {
     @Test
     public void testIt() {
         final TestBenchElement card = $("game-card").first();
-        Assert.assertEquals("♥", card.getAttribute("symbol"));
-        Assert.assertEquals("A", card.getAttribute("rank"));
-        final TestBenchElement rankSymbol = card.$("span")
+        Assert.assertTrue(card.hasAttribute("symbol"));
+        Assert.assertTrue(card.hasAttribute("rank"));
+        Assert.assertTrue(card.$("span")
                 .attributeContains("class", "rank-symbol")
-                .first();
-        Assert.assertEquals("♥", rankSymbol.getText());
+                .exists());
     }
 }
