@@ -45,12 +45,12 @@
     <repositories>
         <repository>
             <id>Vaadin Directory</id>
-            <url>http://maven.vaadin.com/vaadin-addons</url>
+            <url>https://maven.vaadin.com/vaadin-addons</url>
         </repository>
         <!-- Repository needed for prerelease versions of Vaadin -->
         <repository>
             <id>Vaadin prereleases</id>
-            <url>http://maven.vaadin.com/vaadin-prereleases</url>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </repository>
         <!-- Repository needed for the snapshot versions of Vaadin -->
         <repository>
@@ -63,7 +63,7 @@
         <!-- Repository needed for prerelease versions of Vaadin -->
         <pluginRepository>
             <id>Vaadin prereleases</id>
-            <url>http://maven.vaadin.com/vaadin-prereleases</url>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </pluginRepository>
         <pluginRepository>
             <id>vaadin-snapshots</id>
