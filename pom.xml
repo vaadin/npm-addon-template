@@ -19,6 +19,8 @@
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
+
+        <jetty.version>9.4.15.v20190215</jetty.version>
     </properties>
     <organization>
         <name>###author###</name>
@@ -138,6 +140,19 @@
                     </archive>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <version>${vaadin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-frontend</goal>
+                            <goal>build-frontend</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -223,7 +238,7 @@
                     <plugin>
                         <groupId>org.eclipse.jetty</groupId>
                         <artifactId>jetty-maven-plugin</artifactId>
-                        <version>9.4.15.v20190215</version>
+                        <version>${jetty.version}</version>
                         <configuration>
                             <scanIntervalSeconds>-1</scanIntervalSeconds>
                             <!-- Use test scope because the UI/demo classes are in
@@ -232,8 +247,6 @@
                             <supportedPackagings>
                                 <supportedPackaging>jar</supportedPackaging>
                             </supportedPackagings>
-                            <stopKey>${project.artifactId}</stopKey>
-                            <stopPort>8081</stopPort>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -261,6 +274,15 @@
                     <plugin>
                         <groupId>org.eclipse.jetty</groupId>
                         <artifactId>jetty-maven-plugin</artifactId>
+                        <version>${jetty.version}</version>
+                        <configuration>
+                            <scanIntervalSeconds>0</scanIntervalSeconds>
+                            <supportedPackagings>
+                                <supportedPackaging>jar</supportedPackaging>
+                            </supportedPackagings>
+                            <stopKey>${project.artifactId}</stopKey>
+                            <stopPort>8081</stopPort>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>start-jetty</id>
@@ -330,6 +352,30 @@
                                 </webdriver.chrome.driver>
                             </systemPropertyVariables>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <!-- Since the view class is defined in test, after compilation
+                                copy it to the runtime classpath to ensure it gets visited by
+                                  vaadin-maven-plugin -->
+                                <id>copy-test-to-classes</id>
+                                <phase>process-test-classes</phase>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <resources>
+                                        <resource>
+                                            <directory>${project.build.testOutputDirectory}</directory>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
