@@ -13,14 +13,15 @@ import com.vaadin.testbench.parallel.ParallelTest;
  * <p>
  * The tests use Chrome driver (see pom.xml for integration-tests profile) to
  * run integration tests on a headless Chrome. If a property {@code test.use
- * .hub} is set to true, {@code AbstractViewTest} will assume that the
- * TestBench test is running in a CI environment. In order to keep the this
- * class light, it makes certain assumptions about the CI environment (such
- * as available environment variables). It is not advisable to use this class
- * as a base class for you own TestBench tests.
+ * .hub} is set to true, {@code AbstractViewTest} will assume that the TestBench
+ * test is running in a CI environment. In order to keep the this class light,
+ * it makes certain assumptions about the CI environment (such as available
+ * environment variables). It is not advisable to use this class as a base class
+ * for you own TestBench tests.
  * <p>
- * To learn more about TestBench, visit
- * <a href="https://vaadin.com/docs/v10/testbench/testbench-overview.html">Vaadin TestBench</a>.
+ * To learn more about TestBench, visit <a href=
+ * "https://vaadin.com/docs/v10/testbench/testbench-overview.html">Vaadin
+ * TestBench</a>.
  */
 public abstract class AbstractViewTest extends ParallelTest {
     private static final int SERVER_PORT = 8080;
@@ -39,6 +40,7 @@ public abstract class AbstractViewTest extends ParallelTest {
         this.route = route;
     }
 
+    @Override
     @Before
     public void setup() throws Exception {
         if (isUsingHub()) {
@@ -65,15 +67,15 @@ public abstract class AbstractViewTest extends ParallelTest {
     private static final String USE_HUB_PROPERTY = "test.use.hub";
 
     /**
-     * Returns whether we are using a test hub. This means that the starter
-     * is running tests in Vaadin's CI environment, and uses TestBench to
-     * connect to the testing hub.
+     * Returns whether we are using a test hub. This means that the starter is
+     * running tests in Vaadin's CI environment, and uses TestBench to connect
+     * to the testing hub.
      *
      * @return whether we are using a test hub
      */
     private static boolean isUsingHub() {
-        return Boolean.TRUE.toString().equals(
-                System.getProperty(USE_HUB_PROPERTY));
+        return Boolean.TRUE.toString()
+                .equals(System.getProperty(USE_HUB_PROPERTY));
     }
 
     /**
