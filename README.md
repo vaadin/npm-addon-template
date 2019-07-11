@@ -15,7 +15,7 @@ component using the `@NpmPackage` annotation in addition to using
 
 Starting the test/demo server:
 ```
-mvn -pl component-starter-flow-demo install jetty:run -P demo
+mvn -pl component-starter-flow-demo jetty:run -P demo
 ```
 
 This deploys demo at http://localhost:8080
