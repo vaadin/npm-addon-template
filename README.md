@@ -4,25 +4,27 @@ Vaadin 14 Java integration of https://github.com/vpusher/game-card
 
 ## Development instructions
 
-JavaScript modules can either be published as an NPM package or be kept as local in
-the jar file.
-Any non published JavaScript modules should be put in `src/main/resources/META-INF/frontend`
-so that they are automatically found and copied in the using application.
+JavaScript modules can either be published as an NPM package or be kept as local 
+files in your project. The local JavaScript modules should be put in 
+`src/main/resources/META-INF/frontend` so that they are automatically found and 
+used in the using application.
 
-If the modules are published then the package should be noted in the
-component using the `@NpmPackage` annotation in addition to using 
-`@JsModule`.
+If the modules are published then the package should be noted in the component 
+using the `@NpmPackage` annotation in addition to using `@JsModule` annotation.
+
 
 Starting the test/demo server:
-```
-mvn -pl component-starter-flow-demo jetty:run -P demo
-```
+1. Run `mvn install`.
+2. Run `mvn -pl component-starter-flow-demo jetty:run`.
+3. Open http://localhost:8080 in the browser.
 
-This deploys demo at http://localhost:8080
+If you want to run the demo locally in the production mode, run the 
+following instead of step 2.
+- `mvn -pl component-starter-flow-demo jetty:run -Pproduction`
 
 ### Branching information
 
-* `master` the latest version of the starter, using latest platform snapshot
+* `master` the latest version of the starter, using the latest platform version
 * `v10` the version for Vaadin 10
 * `v11` the version for Vaadin 11
 * `v12` the version for Vaadin 12
