@@ -11,7 +11,7 @@
      <packaging>pom</packaging>
 
     <properties>
-        <vaadin.version>14.0.0.rc4</vaadin.version>
+        <vaadin.version>14.0.0.rc5</vaadin.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
