@@ -10,7 +10,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 @NpmPackage(value = "@polymer/paper-slider", version = "^3.0.1")
 public class PaperSlider extends Component {
 
-	public PaperSlider() {
-	}
+    public PaperSlider() {
+    }
 
 }

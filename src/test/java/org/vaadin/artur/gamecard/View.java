@@ -8,8 +8,8 @@ import com.vaadin.flow.router.Route;
 @Route("")
 public class View extends Div {
 
-	public View() {
-		PaperSlider paperSlider = new PaperSlider();
-		add(paperSlider);
-	}
+    public View() {
+        PaperSlider paperSlider = new PaperSlider();
+        add(paperSlider);
+    }
 }
