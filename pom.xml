@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.vaadin.artur</groupId>
-    <artifactId>game-card-flow</artifactId>
+    <artifactId>paper-slider-flow</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Game Card</name>
-    <description>Integration of game-card for Vaadin platform</description>
+    <name>Paper Slider</name>
+    <description>Integration of paper-slider for Vaadin platform</description>
 
     <properties>
         <vaadin.version>14.0.0.rc7</vaadin.version>
@@ -18,7 +18,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
-        <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
 
         <jetty.version>9.4.15.v20190215</jetty.version>
     </properties>
@@ -122,6 +121,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>jetty:run</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -148,10 +148,23 @@
                     <execution>
                         <goals>
                             <goal>prepare-frontend</goal>
-                            <goal>build-frontend</goal>
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
+                <configuration>
+                    <scanIntervalSeconds>-1</scanIntervalSeconds>
+                    <!-- Use test scope because the UI/demo classes are in
+                            the test package. -->
+                    <useTestScope>true</useTestScope>
+                    <supportedPackagings>
+                        <supportedPackaging>jar</supportedPackaging>
+                    </supportedPackagings>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -210,43 +223,6 @@
                         <configuration>
                             <quiet>true</quiet>
                             <additionalparam>-Xdoclint:none</additionalparam>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- Run demo  -->
-        <profile>
-            <id>demo</id>
-
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.vaadin</groupId>
-                        <artifactId>vaadin-maven-plugin</artifactId>
-                        <version>${vaadin.version}</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>prepare-frontend</goal>
-                                    <goal>build-frontend</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.eclipse.jetty</groupId>
-                        <artifactId>jetty-maven-plugin</artifactId>
-                        <version>${jetty.version}</version>
-                        <configuration>
-                            <scanIntervalSeconds>-1</scanIntervalSeconds>
-                            <!-- Use test scope because the UI/demo classes are in
-                                the test package. -->
-                            <useTestScope>true</useTestScope>
-                            <supportedPackagings>
-                                <supportedPackaging>jar</supportedPackaging>
-                            </supportedPackagings>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -322,7 +298,6 @@
                         </configuration>
                         <executions>
                             <execution>
-                                <phase>${drivers.downloader.phase}</phase>
                                 <goals>
                                     <goal>selenium</goal>
                                 </goals>

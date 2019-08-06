@@ -1,6 +1,6 @@
-# Game Card
+# Paper Slider
 
-Vaadin 14 Java integration of https://github.com/vpusher/game-card
+Vaadin 14 Java integration of @polymer/paper-slider
 
 ## Development instructions
 
@@ -14,18 +14,6 @@ using the `@NpmPackage` annotation in addition to using `@JsModule` annotation.
 
 
 Starting the test/demo server:
-1. Run `mvn install`.
-2. Run `mvn -pl component-starter-flow-demo jetty:run`.
-3. Open http://localhost:8080 in the browser.
+1. Run `mvn jetty:run`.
+2. Open http://localhost:8080 in the browser.
 
-If you want to run the demo locally in the production mode, run the 
-following instead of step 2.
-- `mvn -pl component-starter-flow-demo jetty:run -Pproduction`
-
-### Branching information
-
-* `master` the latest version of the starter, using the latest platform version
-* `v10` the version for Vaadin 10
-* `v11` the version for Vaadin 11
-* `v12` the version for Vaadin 12
-* `v13` the version for Vaadin 13
