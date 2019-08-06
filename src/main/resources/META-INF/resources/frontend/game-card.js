@@ -1,0 +1,408 @@
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+
+/*
+`<game-card>` is a playing game card element. The card can be flipped showing its back or front face.
+
+Example:
+
+    <game-card symbol="♣" rank="6"></game-card>
+
+@demo demo/index.html
+*/
+
+class GameCard extends PolymerElement {
+  static get template() {
+    return html`
+        <style>
+            :host {
+                display: inline-block;
+                font-size: 34px;
+                height: 264px; /* 88 * 3 */
+                width: 186px; /* 62 * 3 */
+
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Chrome/Safari/Opera */
+                -khtml-user-select: none; /* Konqueror */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently not supported by any browser */
+            }
+
+            :host * {
+                box-sizing: border-box;
+            }
+
+            #container {
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                /* entire container, keeps perspective */
+                perspective: 1000px;
+            }
+
+
+            #front, #back {
+              /* flip speed goes here */
+              transition: transform 0.6s;
+            }
+
+            #back {
+              /* back, initially hidden pane */
+              transform: rotateY(-180deg);
+            }
+
+            /* flip the pane when hovered */
+            :host([unrevealed]) #back {
+                transform: rotateY(0deg);
+            }
+            :host([unrevealed]) #front {
+                transform: rotateY(180deg);
+            }
+
+            #front, #back {
+                width: 100%;
+                height: 100%;
+            }
+
+            #front, #back {
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                position: absolute;
+                border-radius: 10px;
+                background: #FFF;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                top: 0;
+                left: 0;
+            }
+            .highlighted #front {
+              background-color: rgba(255, 150, 150, 1);
+            }
+            #back {
+                padding: 10px;
+            }
+
+            #back-draw {
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                background-color: #8fa0b5;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYxIiBoZWlnaHQ9IjEzMiIgdmlld0JveD0iMCAwIDE2MSAxMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiMyQTNCOEYiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjMjlBQkUyIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iMCUiIHkxPSI1MCUiIHkyPSI1MCUiIGlkPSJiIj48c3RvcCBzdG9wLWNvbG9yPSIjMkEzQjhGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzI5QUJFMiIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjEwMCUiIHkxPSI1MCUiIHgyPSIwJSIgeTI9IjUwJSIgaWQ9ImMiPjxzdG9wIHN0b3AtY29sb3I9IiNCNEQ0NEUiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRTdGNzE2IiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iMTAwJSIgeTE9IjUwJSIgeDI9IjAlIiB5Mj0iNTAlIiBpZD0iZCI+PHN0b3Agc3RvcC1jb2xvcj0iI0I0RDQ0RSIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiNFN0Y3MTYiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iIzE2NkRBNSIgZD0iTTE2MC42IDY1LjlsLTE3LjQgMjkuMy0yNC40LTI5LjcgMjQuNC0yOC45eiIvPjxwYXRoIGZpbGw9IiM4RkRCNjkiIGQ9Ik0xNDEuMyAxMDAuMmwtMjYuNS0zMS43LTE1LjkgMjYuNiAyNC43IDM2LjF6Ii8+PHBhdGggZmlsbD0iIzE2NkRBNSIgZD0iTTE0MSAzMS40bC0yNi4yIDMxLjgtMTUuOS0yNi42TDEyMy42Ljl6Ii8+PHBhdGggZmlsbD0idXJsKCNhKSIgb3BhY2l0eT0iLjk1IiBkPSJNNjEuMSAzMS40SDE0MUwxMjMuNC45SDc4Ljd6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgb3BhY2l0eT0iLjk1IiBkPSJNMTE0LjggNjMuM0gxNTlsLTE1LjktMjYuOEg5OC44Ii8+PHBhdGggZmlsbD0idXJsKCNjKSIgb3BhY2l0eT0iLjk1IiBkPSJNMTQxLjMgMTAwLjNINjFsMTcuNiAzMC41aDQ1eiIvPjxwYXRoIGZpbGw9IiMwMTAxMDEiIGQ9Ik03OC42IDEzMC44TDQxIDY1LjggNzkuMS44SDM3LjlMLjQgNjUuOGwzNy41IDY1eiIvPjxwYXRoIGZpbGw9InVybCgjZCkiIG9wYWNpdHk9Ii45NSIgZD0iTTExNC44IDY4LjRIMTU5bC0xNS45IDI2LjhIOTguOCIvPjwvZz48L3N2Zz4=');
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 50%;
+            }
+
+            /* front pane, placed above back */
+            #front {
+                z-index: 2;
+                /* for firefox 31 */
+                transform: rotateY(0deg);
+                border: 1px solid grey;
+            }
+
+            .rank, .symbol {
+                display: inline-block;
+                position: absolute;
+            }
+
+            .rank {
+                top: 12px;
+                left: 12px;
+                text-align: center;
+                font-size: 0.8em;
+                line-height: 0.8em;
+            }
+
+            .rank.reversed {
+                top: auto;
+                left: auto;
+                right: 12px;
+                bottom: 12px;
+            }
+
+            .rank-symbol {
+                font-size: 0.7em;
+            }
+
+            .reversed {
+                transform: rotateZ(180deg);
+            }
+
+            .h-centered {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .v-centered {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .h-centered.v-centered {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            .h-centered.reversed {
+                transform: translateX(-50%) rotateZ(180deg);;
+            }
+
+            .v-centered.reversed {
+                transform: translateY(-50%) rotateZ(180deg);;
+            }
+
+            .h-centered.v-centered.reversed {
+                transform: translateX(-50%) translateY(-50%) rotateZ(180deg);;
+            }
+
+            .top {
+                top: 10%;
+            }
+
+            .bottom {
+                bottom: 10%;
+            }
+
+            .left {
+                left: 20%;
+            }
+
+            .right {
+                right: 20%;
+            }
+
+            .near-top {
+                top: 20%;
+            }
+
+            .near-bottom {
+                bottom: 20%;
+            }
+
+            .far-top {
+                top: 30%;
+            }
+
+            .far-bottom {
+                bottom: 30%;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .red {
+                color: red;
+            }
+
+            .black {
+                color: black;
+            }
+
+            .figure {
+                width: 100%;
+                max-height: 100%;
+            }
+
+        </style>
+
+        <div id="container" class$="[[_computeColorClass(symbol)]]">
+            <div id="front">
+                <span class="rank">[[upper(rank)]]<br/><span class="rank-symbol">[[symbol]]</span></span>
+                <span class="rank reversed">[[upper(rank)]]<br/><span class="rank-symbol">[[symbol]]</span></span>
+                <span class$="[[_computePositionClass(0, 'symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(1, 'symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(2, 'symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(3, 'symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(4, 'symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(5, 'reversed symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(6, 'reversed symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(7, 'reversed symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(8, 'reversed symbol', rank)]]">[[symbol]]</span>
+                <span class$="[[_computePositionClass(9, 'reversed symbol', rank)]]">[[symbol]]</span>
+                <img class="figure" src="[[_computeFigureImage(rank, symbol)]]">
+            </div>
+            <div id="back">
+                <div id="back-draw"></div>
+            </div>
+        </div>
+    `;
+  }
+
+
+  static get is() {
+    return 'game-card';
+  }
+
+  /* Spade character ♠ */
+  static get SPADE() {
+    return '♠';
+  }
+
+  /* Heart character ♥ */
+  static get HEART() {
+    return '♥';
+  }
+
+  /* Club character ♣ */
+  static get CLUB() {
+    return '♣';
+  }
+
+  /* Diamond character ♦ */
+  static get DIAMOND() {
+    return '♦';
+  }
+
+  /* Symbols names indexed by `symbol` (character) */
+  static get SYMBOLS() {
+    return {
+      '♠': 'spade',
+      '♥': 'heart',
+      '♣': 'club',
+      '♦': 'diamond'
+    };
+  }
+
+  /* Rank names indexed by `rank` */
+  static get RANKS() {
+    return {
+      'a': 'ace',
+      '2': 'two',
+      '3': 'three',
+      '4': 'four',
+      '5': 'five',
+      '6': 'six',
+      '7': 'seven',
+      '8': 'height',
+      '9': 'nine',
+      '10': 'ten',
+      'j': 'jack',
+      'q': 'queen',
+      'k': 'king'
+    }
+  }
+
+  /* List of figures among ranks */
+  static get FIGURES() {
+    return ['j', 'q', 'k'];
+  }
+
+  static get COLOR_CLASSES() {
+    return {
+      '♠': 'black',
+      '♥': 'red',
+      '♣': 'black',
+      '♦': 'red'
+    };
+  }
+
+  static get CLASS_MATRIX() {
+    return [
+      ['h-centered v-centered'],
+      ['h-centered top', , , , , 'h-centered bottom'],
+      ['h-centered top', 'h-centered v-centered', , , , 'h-centered bottom'],
+      ['top left', 'top right', , , , 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'h-centered v-centered', , , 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'v-centered left', 'v-centered right', , 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'v-centered left', 'v-centered right', 'h-centered near-top', 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'far-top left', 'far-top right', , 'far-bottom left', 'far-bottom right', 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'far-top left', 'far-top right', 'h-centered near-top', 'far-bottom left', 'far-bottom right', 'bottom left', 'bottom right'],
+      ['top left', 'top right', 'far-top left', 'far-top right', 'h-centered near-top', 'far-bottom left', 'far-bottom right', 'bottom left', 'bottom right', 'h-centered near-bottom'],
+    ];
+  }
+
+  static get properties() {
+    return {
+      /* Defines the card's suit (spade, heart, club or diamond). It can be either `♠`, `♥`, `♣` or `♦` */
+      symbol: {
+        type: String,
+        value: '',
+        reflectToAttribute: true
+      },
+
+      /* Defines the card's number/level. It can be either `a`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `j`, `q` or `k` */
+      rank: {
+        type: String,
+        value: '',
+        reflectToAttribute: true
+      },
+
+      /* Tells whether the card show its front or back face. */
+      unrevealed: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true
+      },
+
+      /* Tells whether the card can be flipped by clicking on it. */
+      flippable: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true
+      },
+
+      /* Tells whether the card is highlighted ("selected") or not. */
+      highlighted: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true,
+        observer: '_highlightedChanged'
+      }
+    }
+  }
+
+  static get observers() {
+    return [
+      '_flippableChanged(flippable)'
+    ]
+  }
+
+  constructor() {
+    super();
+    this._flip = this.flip.bind(this);
+  }
+
+  flip() {
+    this.unrevealed = !this.unrevealed;
+  }
+
+  upper(token) {
+    return token ? token.toUpperCase() : '';
+  }
+
+  _computePositionClass(index, suffix, rank) {
+    var klass = GameCard.CLASS_MATRIX[rank.toLowerCase() === 'a' ? 0 : rank - 1];
+    klass = klass && klass[index];
+
+    return `${klass ? klass : 'hidden'} ${suffix}`;
+  }
+
+  _computeColorClass(symbol) {
+    return GameCard.COLOR_CLASSES[symbol];
+  }
+
+  _computeFigureImage(rank, symbol) {
+    var rankName = GameCard.FIGURES.indexOf(rank.toLowerCase()) != -1 && GameCard.RANKS[rank.toLowerCase()],
+      symbolName = GameCard.SYMBOLS[symbol];
+
+    return rankName && symbolName ? this.resolveUrl(`images/${rankName}_of_${symbolName}s_fr.svg`) : '';
+  }
+
+  _flippableChanged(flippable) {
+    if (flippable) {
+      this.$.container.addEventListener('click', this._flip);
+    } else {
+      this.$.container.removeEventListener('click', this._flip);
+    }
+  }
+
+  _highlightedChanged(highlighted) {
+    this.$.container.classList.toggle("highlighted", highlighted);
+  }
+
+}
+
+customElements.define(GameCard.is, GameCard);
+
