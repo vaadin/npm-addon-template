@@ -1,4 +1,4 @@
-package org.vaadin.artur.paperspinner;
+package org.vaadin.artur.paperslider;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;

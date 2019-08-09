@@ -1,6 +1,4 @@
-package org.vaadin.artur.gamecard;
-
-import org.vaadin.artur.paperspinner.PaperSlider;
+package org.vaadin.artur.paperslider;
 
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
