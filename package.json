@@ -4,13 +4,14 @@
   "dependencies": {
     "@polymer/polymer": "3.2.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
-    "@vaadin/flow-deps": "./target/frontend"
+    "@vaadin/flow-deps": "./target/frontend",
+    "@vaadin/flow-frontend": "./target/flow-frontend"
   },
   "devDependencies": {
     "webpack": "4.30.0",
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.3.0",
-    "webpack-babel-multi-target-plugin": "2.1.0",
+    "webpack-babel-multi-target-plugin": "2.3.1",
     "copy-webpack-plugin": "5.0.3",
     "webpack-merge": "4.2.1",
     "raw-loader": "3.0.0",
@@ -20,5 +21,5 @@
     "typescript": "3.5.3",
     "awesome-typescript-loader": "5.2.1"
   },
-  "vaadinAppPackageHash": "af86d3fd798fd948c761f40914de1e0521907eebb44a0c48be794c212e2ce97d"
+  "vaadinAppPackageHash": "867d149a96d9a1f35bf0fbab0ab1b1d61c4d9cd6399dbe5a0880a5c36b48f4d0"
 }
