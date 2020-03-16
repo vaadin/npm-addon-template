@@ -12,7 +12,7 @@
     "@vaadin/vaadin-split-layout": "4.1.1",
     "@vaadin/vaadin-cookie-consent": "1.1.2",
     "@vaadin/vaadin-combo-box": "5.0.10",
-    "@vaadin/vaadin-core-shrinkwrap": "15.0.1",
+    "@vaadin/vaadin-core-shrinkwrap": "15.0.2",
     "@vaadin/vaadin-upload": "4.2.2",
     "@vaadin/vaadin-dialog": "2.2.1",
     "@vaadin/vaadin-select": "2.1.7",
@@ -23,11 +23,11 @@
     "@vaadin/vaadin-notification": "1.4.0",
     "@vaadin/vaadin-grid-pro": "2.0.6",
     "@vaadin/vaadin-progress-bar": "1.1.2",
-    "@vaadin/vaadin-shrinkwrap": "15.0.1",
+    "@vaadin/vaadin-shrinkwrap": "15.0.2",
     "@vaadin/vaadin-ordered-layout": "1.1.0",
     "@vaadin/vaadin-login": "1.0.1",
     "@vaadin/vaadin-button": "2.2.2",
-    "@vaadin/vaadin-date-picker": "4.0.7",
+    "@vaadin/vaadin-date-picker": "4.0.8",
     "@vaadin/vaadin-text-field": "2.5.4",
     "@vaadin/vaadin-menu-bar": "1.0.5",
     "@vaadin/vaadin-custom-field": "1.0.11",
@@ -73,7 +73,7 @@
       "@vaadin/vaadin-split-layout": "4.1.1",
       "@vaadin/vaadin-cookie-consent": "1.1.2",
       "@vaadin/vaadin-combo-box": "5.0.10",
-      "@vaadin/vaadin-core-shrinkwrap": "15.0.1",
+      "@vaadin/vaadin-core-shrinkwrap": "15.0.2",
       "@vaadin/vaadin-upload": "4.2.2",
       "@vaadin/vaadin-dialog": "2.2.1",
       "@vaadin/vaadin-select": "2.1.7",
@@ -84,11 +84,11 @@
       "@vaadin/vaadin-notification": "1.4.0",
       "@vaadin/vaadin-grid-pro": "2.0.6",
       "@vaadin/vaadin-progress-bar": "1.1.2",
-      "@vaadin/vaadin-shrinkwrap": "15.0.1",
+      "@vaadin/vaadin-shrinkwrap": "15.0.2",
       "@vaadin/vaadin-ordered-layout": "1.1.0",
       "@vaadin/vaadin-login": "1.0.1",
       "@vaadin/vaadin-button": "2.2.2",
-      "@vaadin/vaadin-date-picker": "4.0.7",
+      "@vaadin/vaadin-date-picker": "4.0.8",
       "@vaadin/vaadin-text-field": "2.5.4",
       "@vaadin/vaadin-menu-bar": "1.0.5",
       "@vaadin/vaadin-custom-field": "1.0.11",
@@ -123,6 +123,6 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.10.3"
     },
-    "hash": "8fc45e747502cb7655edebda16e863d4e94ca5ac46afd328b0c7ae379627d886"
+    "hash": "e3d1806108efc509a68ce7cbac1f12404108b189e8fd6cff444bd7551f21ba45"
   }
 }
