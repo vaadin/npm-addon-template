@@ -19,7 +19,7 @@
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
 
-        <jetty.version>9.4.27.v20200227</jetty.version>
+        <jetty.version>9.4.18.v20190429</jetty.version>
     </properties>
     <organization>
         <name>###author###</name>
