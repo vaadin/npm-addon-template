@@ -1,4 +1,4 @@
-package org.vaadin.artur.paperslider;
+package org.vaadin.example.addon;
 
 import org.junit.Before;
 import org.junit.Rule;

@@ -1,4 +1,4 @@
-package org.vaadin.artur.paperslider;
+package org.vaadin.example.addon;
 
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
@@ -7,7 +7,8 @@ import com.vaadin.flow.router.Route;
 public class View extends Div {
 
     public View() {
-        PaperSlider paperSlider = new PaperSlider();
-        add(paperSlider);
+        TheAddon theAddon = new TheAddon();
+        theAddon.setId("theAddon");
+        add(theAddon);
     }
 }
