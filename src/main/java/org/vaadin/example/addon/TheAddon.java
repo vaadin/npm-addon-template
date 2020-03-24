@@ -16,6 +16,6 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 public class TheAddon extends Component {
 
     public TheAddon() {
+        // The component initialization code comes here.
     }
-
 }
