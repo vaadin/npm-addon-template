@@ -2,6 +2,10 @@
 
 Vaadin 14 Java integration of @polymer/paper-slider
 
+When creating a starter project from vaadin.com/start, a "npm module name"
+should be specified to create a Java component for it. If "npm module name" is left empty, a Java
+component is created for Polymer paper-slider component.
+
 ## Development instructions
 
 JavaScript modules can either be published as an NPM package or be kept as local 

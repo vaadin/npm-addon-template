@@ -10,7 +10,7 @@
     <description>Integration of paper-slider for Vaadin platform</description>
 
     <properties>
-        <vaadin.version>15.0.2</vaadin.version>
+        <vaadin.version>15.0.5</vaadin.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -19,7 +19,7 @@
 
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
 
-        <jetty.version>9.4.15.v20190215</jetty.version>
+        <jetty.version>9.4.18.v20190429</jetty.version>
     </properties>
     <organization>
         <name>###author###</name>
