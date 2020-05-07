@@ -62,7 +62,8 @@
     "awesome-typescript-loader": "5.2.1",
     "typescript": "3.8.3",
     "terser": "4.6.7",
-    "progress-webpack-plugin": "0.0.24"
+    "progress-webpack-plugin": "0.0.24",
+    "lit-element": "2.3.1"
   },
   "vaadin": {
     "dependencies": {
@@ -124,7 +125,8 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.10.3",
       "terser": "4.6.7",
-      "progress-webpack-plugin": "0.0.24"
+      "progress-webpack-plugin": "0.0.24",
+      "lit-element": "2.3.1"
     },
     "hash": "0bad46e874e13325a9b58b108914ec616938f7324f88fbb5680557c4f2780327"
   }
