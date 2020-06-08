@@ -1,6 +1,8 @@
 package org.vaadin.artur.paperslider;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -30,6 +32,11 @@ public abstract class AbstractViewTest extends ParallelTest {
     @Rule
     public ScreenshotOnFailureRule rule = new ScreenshotOnFailureRule(this,
             true);
+
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     public AbstractViewTest() {
         this("");
