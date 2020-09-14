@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.vaadin.artur</groupId>
-    <artifactId>paper-slider-flow</artifactId>
+    <artifactId>mwc-slider-flow</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Paper Slider</name>
-    <description>Integration of paper-slider for Vaadin platform</description>
+    <name>Material Web Components Slider</name>
+    <description>Integration of mwc-slider for Vaadin platform</description>
 
     <properties>
         <vaadin.version>17.0.2</vaadin.version>

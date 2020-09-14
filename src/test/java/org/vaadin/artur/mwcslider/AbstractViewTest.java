@@ -1,4 +1,4 @@
-package org.vaadin.artur.paperslider;
+package org.vaadin.artur.mwcslider;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;

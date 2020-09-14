@@ -1,21 +1,21 @@
-package org.vaadin.artur.paperslider;
+package org.vaadin.artur.mwcslider;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
-@Tag("paper-slider")
-@JsModule("@polymer/paper-slider/paper-slider.js")
-@NpmPackage(value = "@polymer/paper-slider", version = "^3.0.1")
+@Tag("mwc-slider")
+@JsModule("@material/mwc-slider/mwc-slider.js")
+@NpmPackage(value = "@material/mwc-slider", version = "0.18.0")
 /*
  If you wish to include your own JS modules in the add-on jar, add the module
  files to './src/main/resources/META-INF/resources/frontend' and insert an
  annotation @JsModule("./my-module.js") here.
 */
-public class PaperSlider extends Component {
+public class MWCSlider extends Component {
 
-    public PaperSlider() {
+    public MWCSlider() {
     }
 
 }
