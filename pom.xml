@@ -42,7 +42,7 @@
     </dependencyManagement>
 
     <repositories>
-         <repository>
+        <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
             <snapshots>
