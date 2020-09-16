@@ -1,4 +1,4 @@
-# Paper Slider
+# AXA Input Text
 
 Vaadin Java integration of `@axa-ch/input-text`.
 
