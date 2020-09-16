@@ -13,9 +13,9 @@ import com.vaadin.flow.component.dependency.NpmPackage;
  files to './src/main/resources/META-INF/resources/frontend' and insert an
  annotation @JsModule("./my-module.js") here.
 */
-public class AXAInputText extends Component {
+public class AxaInputText extends Component {
 
-    public AXAInputText() {
+    public AxaInputText() {
         // Add server-side initialization code here
     }
 }

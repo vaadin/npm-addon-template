@@ -7,7 +7,7 @@ import com.vaadin.flow.router.Route;
 public class View extends VerticalLayout {
 
     public View() {
-        AXAInputText axaInputText = new AXAInputText();
+        AxaInputText axaInputText = new AxaInputText();
         add(axaInputText);
     }
 }

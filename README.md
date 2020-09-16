@@ -1,10 +1,10 @@
 # Paper Slider
 
-Vaadin 14 Java integration of @material/mwc-slider
+Vaadin Java integration of `@axa-ch/input-text`.
 
 When creating a starter project from vaadin.com/start, a "npm module name"
 should be specified to create a Java component for it. If "npm module name" is left empty, a Java
-component is created for Lit mwc-slider component.
+component is created for Lit based `axa-input-text` component.
 
 ## Development instructions
 
@@ -29,6 +29,6 @@ mvn versions:set -DnewVersion=1.0.0 # You cannot publish snapshot versions
 mvn install -Pdirectory
 ```
 
-The package is created as `target/mwc-slider-1.0.0.zip`
+The package is created as `target/axa-input-text-1.0.0.zip`
 
 For more information or to upload the package, visit https://vaadin.com/directory/my-components?uploadNewComponent
