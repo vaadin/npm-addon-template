@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.vaadin.artur</groupId>
-    <artifactId>paper-slider-flow</artifactId>
+    <artifactId>axa-input-text-flow</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Paper Slider</name>
-    <description>Integration of paper-slider for Vaadin platform</description>
+    <name>AXA Input Text</name>
+    <description>Integration of axa-input-text for Vaadin platform</description>
 
     <properties>
         <vaadin.version>17.0.2</vaadin.version>
@@ -42,7 +42,7 @@
     </dependencyManagement>
 
     <repositories>
-         <repository>
+        <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
             <snapshots>
