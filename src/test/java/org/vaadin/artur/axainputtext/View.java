@@ -1,4 +1,4 @@
-package org.vaadin.artur.mwcslider;
+package org.vaadin.artur.axainputtext;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
@@ -7,7 +7,7 @@ import com.vaadin.flow.router.Route;
 public class View extends VerticalLayout {
 
     public View() {
-        MWCSlider mwcSlider = new MWCSlider();
-        add(mwcSlider);
+        AXAInputText axaInputText = new AXAInputText();
+        add(axaInputText);
     }
 }
