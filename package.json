@@ -20,7 +20,7 @@
     "@vaadin/vaadin-confirm-dialog": "22.0.0-alpha6",
     "@vaadin/vaadin-context-menu": "22.0.0-alpha6",
     "@vaadin/vaadin-cookie-consent": "22.0.0-alpha6",
-    "@vaadin/vaadin-core-shrinkwrap": "22.0.0-alpha5",
+    "@vaadin/vaadin-core-shrinkwrap": "22.0.0-alpha6",
     "@vaadin/vaadin-crud": "22.0.0-alpha6",
     "@vaadin/vaadin-custom-field": "22.0.0-alpha6",
     "@vaadin/vaadin-date-picker": "22.0.0-alpha6",
@@ -45,7 +45,7 @@
     "@vaadin/vaadin-radio-button": "22.0.0-alpha6",
     "@vaadin/vaadin-rich-text-editor": "22.0.0-alpha6",
     "@vaadin/vaadin-select": "22.0.0-alpha6",
-    "@vaadin/vaadin-shrinkwrap": "22.0.0-alpha5",
+    "@vaadin/vaadin-shrinkwrap": "22.0.0-alpha6",
     "@vaadin/vaadin-split-layout": "22.0.0-alpha6",
     "@vaadin/vaadin-tabs": "22.0.0-alpha6",
     "@vaadin/vaadin-template-renderer": "22.0.0-alpha6",
@@ -108,7 +108,7 @@
       "@vaadin/vaadin-confirm-dialog": "22.0.0-alpha6",
       "@vaadin/vaadin-context-menu": "22.0.0-alpha6",
       "@vaadin/vaadin-cookie-consent": "22.0.0-alpha6",
-      "@vaadin/vaadin-core-shrinkwrap": "22.0.0-alpha5",
+      "@vaadin/vaadin-core-shrinkwrap": "22.0.0-alpha6",
       "@vaadin/vaadin-crud": "22.0.0-alpha6",
       "@vaadin/vaadin-custom-field": "22.0.0-alpha6",
       "@vaadin/vaadin-date-picker": "22.0.0-alpha6",
@@ -133,7 +133,7 @@
       "@vaadin/vaadin-radio-button": "22.0.0-alpha6",
       "@vaadin/vaadin-rich-text-editor": "22.0.0-alpha6",
       "@vaadin/vaadin-select": "22.0.0-alpha6",
-      "@vaadin/vaadin-shrinkwrap": "22.0.0-alpha5",
+      "@vaadin/vaadin-shrinkwrap": "22.0.0-alpha6",
       "@vaadin/vaadin-split-layout": "22.0.0-alpha6",
       "@vaadin/vaadin-tabs": "22.0.0-alpha6",
       "@vaadin/vaadin-template-renderer": "22.0.0-alpha6",
@@ -168,6 +168,6 @@
       "workbox-precaching": "6.2.0",
       "workbox-webpack-plugin": "6.2.0"
     },
-    "hash": "0a07b2c86737d4d9dcf1c3338b51f10f274824f6b65b6941f1fb3b1303e5cb30"
+    "hash": "ff9d759baf1a054a1999f7df7ebdf0e89d875f031c3a79f44538d0d08cde007f"
   }
 }
