@@ -10,7 +10,7 @@
     <description>Integration of axa-input-text for Vaadin platform</description>
 
     <properties>
-        <vaadin.version>23.0.8</vaadin.version>
+        <vaadin.version>23.0.9</vaadin.version>
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
