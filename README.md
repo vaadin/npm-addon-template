@@ -2,9 +2,12 @@
 
 Vaadin Java integration of `@axa-ch/input-text`.
 
-When creating a starter project from vaadin.com/start, a "npm module name"
-should be specified to create a Java component for it. If "npm module name" is left empty, a Java
+When creating a starter project from vaadin.com/start, a "npm module name" should be 
+specified to create a Java component for it. If "npm module name" is left empty, a Java
 component is created for Lit based `axa-input-text` component.
+
+If you wish to create a composite Vaadin add-on from existing Java components, have 
+a look at the [add-on starter template](https://github.com/vaadin/addon-starter-flow) instead.
 
 ## Development instructions
 
