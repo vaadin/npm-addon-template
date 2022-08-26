@@ -7,7 +7,7 @@ specified to create a Java component for it. If "npm module name" is left empty,
 component is created for Lit based `axa-input-text` component.
 
 Alternatively, using [this Lit-based project template](https://github.com/vaadin/addon-starter-lit-flow), 
-you can make a self-container Vaadin-addon (i.e. without npm package). 
+you can make a self-contained Vaadin-addon (i.e. without npm package). 
 If you wish to create a composite Vaadin add-on from existing Java 
 components, look at [the add-on starter template](https://github.com/vaadin/addon-starter-flow) instead.
 
