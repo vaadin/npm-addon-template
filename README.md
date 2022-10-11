@@ -18,10 +18,10 @@ used in the using application.
 If the modules are published then the package should be noted in the component 
 using the `@NpmPackage` annotation in addition to using `@JsModule` annotation.
 
-
 Starting the test/demo server:
-1. Run `mvn jetty:run`.
-2. Open http://localhost:8080 in the browser.
+1. Import the project to your IDE
+2. Launch the main method of TestApplication class
+3. Open http://localhost:8088 in the browser.
 
 ## Publishing to Vaadin Directory
 
