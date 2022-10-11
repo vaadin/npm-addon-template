@@ -78,8 +78,18 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <!-- Replace artifactId with vaadin-core to use only free components -->
+            <!-- Try to keep transitive dependencies in add-ons to minium.
+                 Usually flow-server is enough, but if you extend an existing
+                 component, add that directly as well or change to 
+                 vaadin/vaadin-core (worse option)
+            -->
+            <artifactId>flow-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <!-- Other components are probably handy when building test views -->
             <artifactId>vaadin</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
