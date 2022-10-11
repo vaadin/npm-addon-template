@@ -1,15 +1,12 @@
-# AXA Input Text
+# Add-on starter for a Lit based web component integration
 
-Vaadin Java integration of `@axa-ch/input-text`.
-
-When creating a starter project from vaadin.com/start, a "npm module name" should be 
-specified to create a Java component for it. If "npm module name" is left empty, a Java
-component is created for Lit based `axa-input-text` component.
+This is an example project for creating a Java wrapper for an existing Lit component that is available in npm.
+The example code integrates `@axa-ch/input-text`.
 
 Alternatively, using [this Lit-based project template](https://github.com/vaadin/addon-starter-lit-flow), 
-you can make a self-contained Vaadin-addon (i.e. without npm package). 
+you can make a self-contained Vaadin-addon (i.e. without npm package, but Lit code integrated to the add-on). 
 If you wish to create a composite Vaadin add-on from existing Java 
-components, look at [the add-on starter template](https://github.com/vaadin/addon-starter-flow) instead.
+components or to for example wrap non-npm JS component, look at the minimalistic [the add-on starter template](https://github.com/vaadin/addon-starter-flow) instead.
 
 ## Development instructions
 
