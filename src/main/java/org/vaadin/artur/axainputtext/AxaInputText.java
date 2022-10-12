@@ -7,7 +7,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 
 @Tag("axa-input-text")
 @JsModule("@axa-ch/input-text/lib/index.js")
-@NpmPackage(value = "@axa-ch/input-text", version = "4.3.11")
+@NpmPackage(value = "@axa-ch/input-text", version = "6.2.4")
 /*
  If you wish to include your own JS modules in the add-on jar, add the module
  files to './src/main/resources/META-INF/resources/frontend' and insert an
