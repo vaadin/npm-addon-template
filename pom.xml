@@ -37,7 +37,9 @@
                 <scope>import</scope>
                 <version>${vaadin.version}</version>
             </dependency>
-            <!-- this is for testing setup only -->
+            <!-- The add-on itself does not depend on Spring Boot. 
+            This is to simplify testing setup only, to get compatible deps
+            needed for testing/development. -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
