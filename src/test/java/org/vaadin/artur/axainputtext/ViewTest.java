@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import com.vaadin.testbench.TestBenchElement;
 
-public class ViewIT extends AbstractViewTest {
+public class ViewTest extends AbstractViewTest {
 
     @Test
     public void componentWorks() {

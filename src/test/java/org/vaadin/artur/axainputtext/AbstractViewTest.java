@@ -9,6 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.vaadin.testbench.ScreenshotOnFailureRule;
 import com.vaadin.testbench.TestBench;
 import com.vaadin.testbench.parallel.ParallelTest;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Base class for ITs
@@ -24,8 +28,12 @@ import com.vaadin.testbench.parallel.ParallelTest;
  * To learn more about TestBench, visit
  * <a href="https://vaadin.com/docs/v10/testbench/testbench-overview.html">Vaadin TestBench</a>.
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class AbstractViewTest extends ParallelTest {
-    private static final int SERVER_PORT = 8088;
+    
+    @LocalServerPort
+    private int port;
 
     private final String route;
 
@@ -61,9 +69,9 @@ public abstract class AbstractViewTest extends ParallelTest {
      *
      * @return URL to route
      */
-    private static String getURL(String route) {
+    private String getURL(String route) {
         return String.format("http://%s:%d/%s", getDeploymentHostname(),
-                SERVER_PORT, route);
+                port, route);
     }
 
     /**
