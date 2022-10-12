@@ -85,6 +85,11 @@
             -->
             <artifactId>flow-server</artifactId>
         </dependency>
+        <!-- TODO: Shouldn't be needed, probably a bug the flow-client is not brought in via flow-server-->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>flow-client</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Other components are probably handy when building test views -->
