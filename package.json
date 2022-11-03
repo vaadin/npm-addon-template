@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@axa-ch/input-text": "4.3.11",
+    "@axa-ch/input-text": "6.2.4",
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-iconset-svg": "3.0.1",
     "@polymer/iron-list": "3.1.0",
@@ -235,7 +235,7 @@
   },
   "vaadin": {
     "dependencies": {
-      "@axa-ch/input-text": "4.3.11",
+      "@axa-ch/input-text": "6.2.4",
       "@polymer/iron-icon": "3.0.1",
       "@polymer/iron-iconset-svg": "3.0.1",
       "@polymer/iron-list": "3.1.0",
@@ -357,6 +357,6 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "1157e28bc55e1c2367c1b91e0bf34745f3a4abd512582eb7bba5ed7f05f831a5"
+    "hash": "b2e2deedde256a5e0d4f67f801b3aff41c0b96a28a341de4439331f282add247"
   }
 }
