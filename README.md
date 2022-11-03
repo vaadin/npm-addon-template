@@ -1,4 +1,4 @@
-# Add-on starter for a Lit based web component integration
+# Add-on starter for a web component integration from NPM
 
 This is an example project for creating a Java wrapper for an existing Lit component that is available in npm.
 The example code integrates `@axa-ch/input-text`.
