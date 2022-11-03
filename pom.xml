@@ -10,7 +10,7 @@
     <description>Integration of axa-input-text for Vaadin platform</description>
 
     <properties>
-        <vaadin.version>23.2.4</vaadin.version>
+        <vaadin.version>23.2.6</vaadin.version>
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -85,7 +85,7 @@
             -->
             <artifactId>flow-server</artifactId>
         </dependency>
-        <!-- TODO: Shouldn't be needed, probably a bug the flow-client is not brought in via flow-server-->
+        <!-- Shouldn't be needed, probably a bug the flow-client is not brought in via flow-server-->
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>flow-client</artifactId>
@@ -93,9 +93,16 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Other components are probably handy when building test views -->
-            <artifactId>vaadin</artifactId>
+            <!-- Replace artifactId with vaadin to use commercial components -->
+            <artifactId>vaadin-core</artifactId>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>        
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -110,7 +117,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
+            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -172,7 +179,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <version>3.3.0</version>
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
@@ -216,6 +223,7 @@
                             </execution>
                         </executions>
                         <configuration>
+                        	<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                             <quiet>true</quiet>
                             <additionalparam>-Xdoclint:none</additionalparam>
                         </configuration>
