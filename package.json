@@ -6,7 +6,7 @@
     "@vaadin/flow-frontend": "./target/flow-frontend",
     "@vaadin/router": "1.7.4",
     "construct-style-sheets-polyfill": "3.1.0",
-    "lit": "2.3.0"
+    "lit": "2.3.1"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "3.1.0",
@@ -41,7 +41,7 @@
       "@vaadin/common-frontend": "0.0.17",
       "@vaadin/router": "1.7.4",
       "construct-style-sheets-polyfill": "3.1.0",
-      "lit": "2.3.0"
+      "lit": "2.3.1"
     },
     "devDependencies": {
       "@rollup/plugin-replace": "3.1.0",
@@ -59,6 +59,6 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "07e80ce3d4f98dcbe40ac151a2cf6af8c14b888f61a672a79ae235dbc3f3e649"
+    "hash": "04b29c08e236292358971eee4308e75ba3523b07faad033a676165ac08446492"
   }
 }
