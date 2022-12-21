@@ -1,4 +1,4 @@
-package org.vaadin.artur.axainputtext;
+package org.vaadin.addons.mygroup;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package org.vaadin.artur.axainputtext;
+package org.vaadin.addons.mygroup;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
