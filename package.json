@@ -20,8 +20,8 @@
     "vite": "v3.2.4",
     "vite-plugin-checker": "0.5.1",
     "workbox-build": "6.5.0",
-    "workbox-core": "6.5.0",
-    "workbox-precaching": "6.5.0"
+    "workbox-core": "6.5.4",
+    "workbox-precaching": "6.5.4"
   },
   "license": "UNLICENSED",
   "name": "no-name",
@@ -55,9 +55,9 @@
       "vite": "v3.2.4",
       "vite-plugin-checker": "0.5.1",
       "workbox-build": "6.5.0",
-      "workbox-core": "6.5.0",
-      "workbox-precaching": "6.5.0"
+      "workbox-core": "6.5.4",
+      "workbox-precaching": "6.5.4"
     },
-    "hash": "a7307fdc109e82eac99564eb7f87419406112ea804029f4a52de1e132d8b9a39"
+    "hash": "fb7f0a03676ac1c65555e4bc0cf8695b4f88523a2d1c42db7cfa76b7f3b49cc3"
   }
 }
