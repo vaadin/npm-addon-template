@@ -5,13 +5,27 @@
 
     <groupId>org.vaadin.addons.mygroup</groupId>
     <artifactId>axa-input-text</artifactId>
+
+    <!-- Add-on version number. Snapshot is good for development,
+    but when publishing, make sure to use semantic version number like '1.0.0'.
+    See https://semver.org/ -->
     <version>1.0-SNAPSHOT</version>
+
+    <!-- Change this. The name is used when you publish to Vaadin Directory.
+    Make sure to use a unique name by first searching at https://vaadin.com/directory -->
     <name>AXA Input Text</name>
     <description>Integration of axa-input-text for Vaadin platform</description>
 
     <properties>
+
+        <!-- This is the Vaadin version your addon is built for.
+        Choose the oldest version you plan to support.
+        More about Vaadin versions at https://vaadin.com/roadmap#support -->
         <vaadin.version>23.3.2</vaadin.version>
 
+        <!-- Java version your add-on supports.
+        This should align with the Vaadin version.
+        E.g. Java 11 for Vaadin 23 and Java 8 for Vaadin 14. -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
