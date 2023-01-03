@@ -34,10 +34,15 @@
         <jetty.version>9.4.28.v20200408</jetty.version>
     </properties>
     <organization>
-        <name>###author###</name>
+        <!-- Name of the add-on author and URL.
+        Update these to match your own name and website. -->
+        <name>Add-on Author Name</name>
+        <url>https://vaadin.com/directory</url>
     </organization>
     <licenses>
         <license>
+            <!-- The license of this add-on.
+            We recommend to use the same Apache 2 open source license like Vaadin itself. -->
             <name>Apache 2</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
