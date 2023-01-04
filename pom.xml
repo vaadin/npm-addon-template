@@ -31,13 +31,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jetty.version>9.4.28.v20200408</jetty.version>
+        <jetty.version>9.4.50.v20221201</jetty.version>
     </properties>
     <organization>
-        <name>###author###</name>
+        <!-- Name of the add-on author and URL.
+        Update these to match your own name and website. -->
+        <name>Add-on Author Name</name>
+        <url>https://vaadin.com/directory</url>
     </organization>
     <licenses>
         <license>
+            <!-- The license of this add-on.
+            We recommend to use the same Apache 2 open source license like Vaadin itself. -->
             <name>Apache 2</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
@@ -142,7 +147,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.1.2</version>
                 <configuration>
                     <archive>
                         <index>true</index>
@@ -193,7 +198,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <version>3.3.0</version>
+                        <version>3.4.2</version>
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
@@ -212,7 +217,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>3.0.1</version>
+                        <version>3.2.1</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -239,13 +244,13 @@
                         <configuration>
                         	<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                             <quiet>true</quiet>
-                            <additionalparam>-Xdoclint:none</additionalparam>
+                            <doclint>none</doclint>
                         </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
-                        <version>3.1.2</version>
+                        <version>3.3.0</version>
                         <configuration>
                             <!-- Generated file that shouldn't be included in add-ons -->
                             <excludes>
@@ -339,7 +344,7 @@
                     </plugin>
                     <plugin>
                         <artifactId>maven-resources-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <version>3.3.0</version>
                         <executions>
                             <execution>
                                 <!-- Since the view class is defined in test, after compilation
