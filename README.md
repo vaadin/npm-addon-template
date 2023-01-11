@@ -3,6 +3,10 @@
 This is an example project for creating a Java wrapper for an existing Lit component that is available in npm.
 The example code integrates `@axa-ch/input-text`.
 
+## Add-on architecture
+
+![vaadin-npm-addon](https://user-images.githubusercontent.com/991105/211800478-e0a44025-dea9-4dff-bde2-4d0ffe11bc94.png)
+
 ### Alternative add-on templates
 
 If you wish to build and publish an add-on or extension in [Vaadin Directory](https://vaadin.com/directory), Vaadin provides the following three template projects:
