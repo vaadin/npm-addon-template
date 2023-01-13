@@ -4,7 +4,7 @@ This is an example project for creating a Java wrapper for an existing Lit compo
 The example code integrates `@axa-ch/input-text`.
 
 ## Add-on architecture
-![npm-addon](https://user-images.githubusercontent.com/991105/211865734-fc5ada2a-b0ea-46ab-9c79-e5ac9e1a1dac.svg)
+![npm-add-on](https://user-images.githubusercontent.com/991105/212105390-acda456a-51d2-4a9c-b482-7ca46d8d894a.svg)
 
 ### Alternative add-on templates
 
