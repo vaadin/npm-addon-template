@@ -3,7 +3,7 @@
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.1",
     "@vaadin/common-frontend": "0.0.18",
-    "@vaadin/router": "1.7.4",
+    "@vaadin/router": "1.7.5",
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "2.6.1"
   },
@@ -17,7 +17,7 @@
     "strip-css-comments": "5.0.0",
     "transform-ast": "2.4.4",
     "typescript": "4.9.5",
-    "vite": "3.2.5",
+    "vite": "3.2.6",
     "vite-plugin-checker": "0.5.4",
     "workbox-build": "6.5.4",
     "workbox-core": "6.5.4",
@@ -38,7 +38,7 @@
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.1",
       "@vaadin/common-frontend": "0.0.18",
-      "@vaadin/router": "1.7.4",
+      "@vaadin/router": "1.7.5",
       "construct-style-sheets-polyfill": "3.1.0",
       "lit": "2.6.1"
     },
@@ -52,12 +52,12 @@
       "strip-css-comments": "5.0.0",
       "transform-ast": "2.4.4",
       "typescript": "4.9.5",
-      "vite": "3.2.5",
+      "vite": "3.2.6",
       "vite-plugin-checker": "0.5.4",
       "workbox-build": "6.5.4",
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "75963c8173bd8494d2427369c47d7b2cf62a0f5beb38c6066a6b5dc2261a3b60"
+    "hash": "9bc7668378bd241617102d4930730624ca1157a1a8f264e37dd0efd09ff7151c"
   }
 }
