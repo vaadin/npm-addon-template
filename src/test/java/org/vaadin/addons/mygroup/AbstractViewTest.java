@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.vaadin.testbench.ScreenshotOnFailureRule;
 import com.vaadin.testbench.TestBench;
@@ -51,7 +52,11 @@ public abstract class AbstractViewTest extends ParallelTest {
         if (isUsingHub()) {
             super.setup();
         } else {
-            setDriver(TestBench.createDriver(new ChromeDriver()));
+            ChromeOptions options = new ChromeOptions();
+            if (Boolean.getBoolean("headless")) {
+                options.addArguments("--headless");
+            }
+            setDriver(TestBench.createDriver(new ChromeDriver(options)));
         }
         getDriver().get(getURL(route));
     }
