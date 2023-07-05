@@ -21,17 +21,17 @@
         <!-- This is the Vaadin version your addon is built for.
         Choose the oldest version you plan to support.
         More about Vaadin versions at https://vaadin.com/roadmap#support -->
-        <vaadin.version>23.3.16</vaadin.version>
+        <vaadin.version>24.0.0</vaadin.version>
 
         <!-- Java version your add-on supports.
         This should align with the Vaadin version.
         E.g. Java 11 for Vaadin 23 and Java 8 for Vaadin 14. -->
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jetty.version>9.4.50.v20221201</jetty.version>
+        <jetty.version>11.0.13</jetty.version>
 
         <!-- Vaadin add-on metadata -->
         <vaadin.addon.owner>Add-on Author Name</vaadin.addon.owner>
@@ -124,9 +124,9 @@
             <scope>test</scope>
         </dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>5.0.0</version>
 			<scope>provided</scope>
 		</dependency>        
         <dependency>
@@ -137,13 +137,6 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -189,7 +182,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>${jetty.version}</version>
+                <version>11.0.13</version>
                 <configuration>
                     <scanIntervalSeconds>3</scanIntervalSeconds>
                     <!-- Use test scope because the UI/demo classes are in
@@ -281,13 +274,6 @@
             <properties>
                 <vaadin.productionMode>true</vaadin.productionMode>
             </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>flow-server-production-mode</artifactId>
-                </dependency>
-            </dependencies>
-            
             <build>
                 <plugins>
                     <plugin>
@@ -312,7 +298,7 @@
                     <plugin>
                         <groupId>org.eclipse.jetty</groupId>
                         <artifactId>jetty-maven-plugin</artifactId>
-                        <version>${jetty.version}</version>
+                        <version>11.0.13</version>
                         <configuration>
                             <scanIntervalSeconds>0</scanIntervalSeconds>
                             <supportedPackagings>
