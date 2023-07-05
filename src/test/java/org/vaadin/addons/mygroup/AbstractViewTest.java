@@ -1,6 +1,5 @@
 package org.vaadin.addons.mygroup;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -33,11 +32,6 @@ public abstract class AbstractViewTest extends ParallelTest {
     @Rule
     public ScreenshotOnFailureRule rule = new ScreenshotOnFailureRule(this,
             true);
-
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
 
     public AbstractViewTest() {
         this("");
