@@ -2,23 +2,23 @@
   "dependencies": {
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.1",
-    "@vaadin/common-frontend": "0.0.18",
-    "@vaadin/router": "1.7.5",
+    "@vaadin/common-frontend": "0.0.17",
+    "@vaadin/router": "1.7.4",
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "2.6.1"
   },
   "devDependencies": {
-    "@rollup/plugin-replace": "3.1.0",
-    "@rollup/pluginutils": "4.1.0",
+    "@rollup/plugin-replace": "5.0.2",
+    "@rollup/pluginutils": "5.0.2",
     "async": "3.2.2",
     "glob": "7.2.3",
     "mkdirp": "1.0.4",
     "rollup-plugin-brotli": "3.1.0",
     "strip-css-comments": "5.0.0",
     "transform-ast": "2.4.4",
-    "typescript": "4.9.5",
-    "vite": "3.2.7",
-    "vite-plugin-checker": "0.5.4",
+    "typescript": "4.9.3",
+    "vite": "4.1.3",
+    "vite-plugin-checker": "0.5.5",
     "workbox-build": "6.5.4",
     "workbox-core": "6.5.4",
     "workbox-precaching": "6.5.4"
@@ -37,27 +37,27 @@
     "dependencies": {
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.1",
-      "@vaadin/common-frontend": "0.0.18",
-      "@vaadin/router": "1.7.5",
+      "@vaadin/common-frontend": "0.0.17",
+      "@vaadin/router": "1.7.4",
       "construct-style-sheets-polyfill": "3.1.0",
       "lit": "2.6.1"
     },
     "devDependencies": {
-      "@rollup/plugin-replace": "3.1.0",
-      "@rollup/pluginutils": "4.1.0",
+      "@rollup/plugin-replace": "5.0.2",
+      "@rollup/pluginutils": "5.0.2",
       "async": "3.2.2",
       "glob": "7.2.3",
       "mkdirp": "1.0.4",
       "rollup-plugin-brotli": "3.1.0",
       "strip-css-comments": "5.0.0",
       "transform-ast": "2.4.4",
-      "typescript": "4.9.5",
-      "vite": "3.2.7",
-      "vite-plugin-checker": "0.5.4",
+      "typescript": "4.9.3",
+      "vite": "4.1.3",
+      "vite-plugin-checker": "0.5.5",
       "workbox-build": "6.5.4",
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "9ad8107612d72f547ab6871a3ae96019d6c944c4782a794cdc9904f6331ee72c"
+    "hash": "1b00dbc6da9d7a648632ea533d2d7a67931446462bd573c981829751b87c1938"
   }
 }
