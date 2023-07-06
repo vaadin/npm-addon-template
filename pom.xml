@@ -285,10 +285,10 @@
                                     <goal>build-frontend</goal>
                                 </goals>
                             </execution>
-		            <configuration>
-			        <optimizeBundle>false</optimizeBundle>
-		            </configuration>			    
                         </executions>
+                        <configuration>
+                            <optimizeBundle>false</optimizeBundle>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
