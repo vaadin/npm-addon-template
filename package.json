@@ -2,26 +2,28 @@
   "dependencies": {
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.1",
-    "@vaadin/common-frontend": "0.0.17",
-    "@vaadin/router": "1.7.4",
+    "@vaadin/common-frontend": "0.0.18",
+    "@vaadin/router": "1.7.5",
     "construct-style-sheets-polyfill": "3.1.0",
-    "lit": "2.6.1"
+    "lit": "2.7.4"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "5.0.2",
     "@rollup/pluginutils": "5.0.2",
+    "@vitejs/plugin-react": "4.0.0",
     "async": "3.2.2",
     "glob": "7.2.3",
     "mkdirp": "1.0.4",
     "rollup-plugin-brotli": "3.1.0",
+    "rollup-plugin-visualizer": "5.9.0",
     "strip-css-comments": "5.0.0",
     "transform-ast": "2.4.4",
-    "typescript": "4.9.3",
-    "vite": "4.1.3",
+    "typescript": "5.0.4",
+    "vite": "4.3.9",
     "vite-plugin-checker": "0.5.5",
-    "workbox-build": "6.5.4",
-    "workbox-core": "6.5.4",
-    "workbox-precaching": "6.5.4"
+    "workbox-build": "7.0.0",
+    "workbox-core": "7.0.0",
+    "workbox-precaching": "7.0.0"
   },
   "license": "UNLICENSED",
   "name": "no-name",
@@ -37,27 +39,29 @@
     "dependencies": {
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.1",
-      "@vaadin/common-frontend": "0.0.17",
-      "@vaadin/router": "1.7.4",
+      "@vaadin/common-frontend": "0.0.18",
+      "@vaadin/router": "1.7.5",
       "construct-style-sheets-polyfill": "3.1.0",
-      "lit": "2.6.1"
+      "lit": "2.7.4"
     },
     "devDependencies": {
       "@rollup/plugin-replace": "5.0.2",
       "@rollup/pluginutils": "5.0.2",
+      "@vitejs/plugin-react": "4.0.0",
       "async": "3.2.2",
       "glob": "7.2.3",
       "mkdirp": "1.0.4",
       "rollup-plugin-brotli": "3.1.0",
+      "rollup-plugin-visualizer": "5.9.0",
       "strip-css-comments": "5.0.0",
       "transform-ast": "2.4.4",
-      "typescript": "4.9.3",
-      "vite": "4.1.3",
+      "typescript": "5.0.4",
+      "vite": "4.3.9",
       "vite-plugin-checker": "0.5.5",
-      "workbox-build": "6.5.4",
-      "workbox-core": "6.5.4",
-      "workbox-precaching": "6.5.4"
+      "workbox-build": "7.0.0",
+      "workbox-core": "7.0.0",
+      "workbox-precaching": "7.0.0"
     },
-    "hash": "1b00dbc6da9d7a648632ea533d2d7a67931446462bd573c981829751b87c1938"
+    "hash": "f93d5f80021026f5ce39f3074d60955f6f7f4a4267cb6cc5301f84c1e9664a55"
   }
 }
