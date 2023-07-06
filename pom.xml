@@ -285,6 +285,9 @@
                                     <goal>build-frontend</goal>
                                 </goals>
                             </execution>
+		            <configuration>
+			        <optimizeBundle>false</optimizeBundle>
+		            </configuration>			    
                         </executions>
                     </plugin>
                 </plugins>
