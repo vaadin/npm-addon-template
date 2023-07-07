@@ -35,7 +35,7 @@
 
         <!-- Vaadin add-on metadata -->
         <vaadin.addon.owner>Add-on Author Name</vaadin.addon.owner>
-        <vaadin.addon.license>Apache License 2.0</vaadin.addon.license>        
+        <vaadin.addon.license>Apache License 2.0</vaadin.addon.license>
         <vaadin.addon.name>${project.name}</vaadin.addon.name>
         <vaadin.addon.jar>${project.build.finalName}.${project.packaging}</vaadin.addon.jar>
         <vaadin.addon.version>${project.version}</vaadin.addon.version>
@@ -106,7 +106,7 @@
             <groupId>com.vaadin</groupId>
             <!-- Try to keep transitive dependencies in add-ons to minium.
                  Usually flow-server is enough, but if you extend an existing
-                 component, add that directly as well or change to 
+                 component, add that directly as well or change to
                  vaadin/vaadin-core (worse option)
             -->
             <artifactId>flow-server</artifactId>
@@ -123,12 +123,12 @@
             <artifactId>vaadin-core</artifactId>
             <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>jakarta.servlet</groupId>
-			<artifactId>jakarta.servlet-api</artifactId>
-			<version>5.0.0</version>
-			<scope>provided</scope>
-		</dependency>        
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -184,7 +184,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>11.0.13</version>
                 <configuration>
-                    <scanIntervalSeconds>3</scanIntervalSeconds>
+                    <scan>3</scan>
                     <!-- Use test scope because the UI/demo classes are in
                             the test package. -->
                     <useTestScope>true</useTestScope>
@@ -248,7 +248,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                        	<javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+                            <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                             <quiet>true</quiet>
                             <doclint>none</doclint>
                         </configuration>
@@ -271,9 +271,13 @@
         <!-- Run (demo) in production mode-->
         <profile>
             <id>production</id>
-            <properties>
-                <vaadin.productionMode>true</vaadin.productionMode>
-            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-core</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
@@ -303,7 +307,7 @@
                         <artifactId>jetty-maven-plugin</artifactId>
                         <version>11.0.13</version>
                         <configuration>
-                            <scanIntervalSeconds>0</scanIntervalSeconds>
+                            <scan>0</scan>
                             <supportedPackagings>
                                 <supportedPackaging>jar</supportedPackaging>
                             </supportedPackagings>
