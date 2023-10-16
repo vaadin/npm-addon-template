@@ -21,7 +21,7 @@
         <!-- This is the Vaadin version your addon is built for.
         Choose the oldest version you plan to support.
         More about Vaadin versions at https://vaadin.com/roadmap#support -->
-        <vaadin.version>24.1.12</vaadin.version>
+        <vaadin.version>24.2.0</vaadin.version>
 
         <!-- Java version your add-on supports.
         This should align with the Vaadin version.
