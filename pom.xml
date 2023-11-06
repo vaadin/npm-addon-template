@@ -110,7 +110,6 @@
                  vaadin/vaadin-core (worse option)
             -->
             <artifactId>flow-server</artifactId>
-            <scope>provided</scope>
         </dependency>
         <!-- Shouldn't be needed, probably a bug the flow-client is not brought in via flow-server-->
         <dependency>
@@ -192,6 +191,7 @@
                     <!-- Use test scope because the UI/demo classes are in
                             the test package. -->
                     <useTestScope>true</useTestScope>
+                    <useProvidedScope>true</useProvidedScope>
                     <supportedPackagings>
                         <supportedPackaging>jar</supportedPackaging>
                     </supportedPackagings>
