@@ -123,7 +123,7 @@
             <!-- Replace artifactId with vaadin to use commercial components -->
             <artifactId>vaadin-core</artifactId>
             <scope>test</scope>
-            <!-- I using vaadin dependency in addon set scope to provided -->
+            <!-- If addon uses the vaadin dependency change scope from test to provided -->
             <!-- <scope>provided</scope> -->
         </dependency>
         <dependency>
