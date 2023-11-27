@@ -104,7 +104,7 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <!-- Try to keep transitive dependencies in add-ons to minium.
+            <!-- Try to keep transitive dependencies in add-ons to minimum.
                  Usually flow-server is enough, but if you extend an existing
                  component, add that directly as well or change to
                  vaadin/vaadin-core (worse option)
@@ -115,6 +115,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>flow-client</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -122,6 +123,8 @@
             <!-- Replace artifactId with vaadin to use commercial components -->
             <artifactId>vaadin-core</artifactId>
             <scope>test</scope>
+            <!-- If addon uses the vaadin dependency change scope from test to provided -->
+            <!-- <scope>provided</scope> -->
         </dependency>
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -188,6 +191,7 @@
                     <!-- Use test scope because the UI/demo classes are in
                             the test package. -->
                     <useTestScope>true</useTestScope>
+                    <useProvidedScope>true</useProvidedScope>
                     <supportedPackagings>
                         <supportedPackaging>jar</supportedPackaging>
                     </supportedPackagings>
