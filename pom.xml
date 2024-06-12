@@ -21,7 +21,7 @@
         <!-- This is the Vaadin version your addon is built for.
         Choose the oldest version you plan to support.
         More about Vaadin versions at https://vaadin.com/roadmap#support -->
-        <vaadin.version>24.3.13</vaadin.version>
+        <vaadin.version>24.4.1</vaadin.version>
 
         <!-- Java version your add-on supports.
         This should align with the Vaadin version.
@@ -31,7 +31,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <jetty.version>11.0.13</jetty.version>
+        <jetty.version>11.0.20</jetty.version>
 
         <!-- Vaadin add-on metadata -->
         <vaadin.addon.owner>Add-on Author Name</vaadin.addon.owner>
