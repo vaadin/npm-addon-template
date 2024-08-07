@@ -2,15 +2,15 @@
   "dependencies": {
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.1",
-    "@vaadin/bundles": "24.4.4",
+    "@vaadin/bundles": "24.4.5",
     "@vaadin/common-frontend": "0.0.19",
-    "@vaadin/polymer-legacy-adapter": "24.4.4",
-    "@vaadin/react-components": "24.4.4",
+    "@vaadin/polymer-legacy-adapter": "24.4.5",
+    "@vaadin/react-components": "24.4.5",
     "@vaadin/router": "1.7.5",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
-    "@vaadin/vaadin-lumo-styles": "24.4.4",
-    "@vaadin/vaadin-material-styles": "24.4.4",
-    "@vaadin/vaadin-themable-mixin": "24.4.4",
+    "@vaadin/vaadin-lumo-styles": "24.4.5",
+    "@vaadin/vaadin-material-styles": "24.4.5",
+    "@vaadin/vaadin-themable-mixin": "24.4.5",
     "@vaadin/vaadin-usage-statistics": "2.1.2",
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
@@ -65,15 +65,15 @@
     "dependencies": {
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.1",
-      "@vaadin/bundles": "24.4.4",
+      "@vaadin/bundles": "24.4.5",
       "@vaadin/common-frontend": "0.0.19",
-      "@vaadin/polymer-legacy-adapter": "24.4.4",
-      "@vaadin/react-components": "24.4.4",
+      "@vaadin/polymer-legacy-adapter": "24.4.5",
+      "@vaadin/react-components": "24.4.5",
       "@vaadin/router": "1.7.5",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
-      "@vaadin/vaadin-lumo-styles": "24.4.4",
-      "@vaadin/vaadin-material-styles": "24.4.4",
-      "@vaadin/vaadin-themable-mixin": "24.4.4",
+      "@vaadin/vaadin-lumo-styles": "24.4.5",
+      "@vaadin/vaadin-material-styles": "24.4.5",
+      "@vaadin/vaadin-themable-mixin": "24.4.5",
       "@vaadin/vaadin-usage-statistics": "2.1.2",
       "construct-style-sheets-polyfill": "3.1.0",
       "date-fns": "2.29.3",
@@ -102,7 +102,7 @@
       "workbox-core": "7.1.0",
       "workbox-precaching": "7.1.0"
     },
-    "hash": "a0901afc93332b56823d9b916445e7b1fb3a8296853e3a35f8fb1160479fcc5c"
+    "hash": "a7f6c417443abc752729702cb4d18f0a20c10ad96f546984de9ca49ca095e4d2"
   },
   "type": "module"
 }
