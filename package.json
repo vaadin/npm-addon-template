@@ -2,22 +2,22 @@
   "dependencies": {
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.1",
-    "@vaadin/bundles": "24.4.7",
+    "@vaadin/bundles": "24.4.9",
     "@vaadin/common-frontend": "0.0.19",
-    "@vaadin/polymer-legacy-adapter": "24.4.7",
-    "@vaadin/react-components": "24.4.7",
+    "@vaadin/polymer-legacy-adapter": "24.4.9",
+    "@vaadin/react-components": "24.4.9",
     "@vaadin/router": "1.7.5",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
-    "@vaadin/vaadin-lumo-styles": "24.4.7",
-    "@vaadin/vaadin-material-styles": "24.4.7",
-    "@vaadin/vaadin-themable-mixin": "24.4.7",
+    "@vaadin/vaadin-lumo-styles": "24.4.9",
+    "@vaadin/vaadin-material-styles": "24.4.9",
+    "@vaadin/vaadin-themable-mixin": "24.4.9",
     "@vaadin/vaadin-usage-statistics": "2.1.3",
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
     "lit": "3.1.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.26.1"
+    "react-router-dom": "6.26.2"
   },
   "devDependencies": {
     "@babel/preset-react": "7.24.7",
@@ -65,22 +65,22 @@
     "dependencies": {
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.1",
-      "@vaadin/bundles": "24.4.7",
+      "@vaadin/bundles": "24.4.9",
       "@vaadin/common-frontend": "0.0.19",
-      "@vaadin/polymer-legacy-adapter": "24.4.7",
-      "@vaadin/react-components": "24.4.7",
+      "@vaadin/polymer-legacy-adapter": "24.4.9",
+      "@vaadin/react-components": "24.4.9",
       "@vaadin/router": "1.7.5",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
-      "@vaadin/vaadin-lumo-styles": "24.4.7",
-      "@vaadin/vaadin-material-styles": "24.4.7",
-      "@vaadin/vaadin-themable-mixin": "24.4.7",
+      "@vaadin/vaadin-lumo-styles": "24.4.9",
+      "@vaadin/vaadin-material-styles": "24.4.9",
+      "@vaadin/vaadin-themable-mixin": "24.4.9",
       "@vaadin/vaadin-usage-statistics": "2.1.3",
       "construct-style-sheets-polyfill": "3.1.0",
       "date-fns": "2.29.3",
       "lit": "3.1.4",
       "react": "18.3.1",
       "react-dom": "18.3.1",
-      "react-router-dom": "6.26.1"
+      "react-router-dom": "6.26.2"
     },
     "devDependencies": {
       "@babel/preset-react": "7.24.7",
@@ -102,7 +102,7 @@
       "workbox-core": "7.1.0",
       "workbox-precaching": "7.1.0"
     },
-    "hash": "31f7a067f1130438e634f3bd3dbc2cc90a8f8dfc5fa27e2b0c7b24ddc12c0271"
+    "hash": "4f31d3c7624f5770148572a9f3b9d72217c00b77fafb59f4b7d4651b68e31035"
   },
   "type": "module"
 }
