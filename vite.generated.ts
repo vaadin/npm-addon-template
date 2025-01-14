@@ -106,7 +106,7 @@ function injectManifestToSWPlugin(): rollup.Plugin {
         const { manifestEntries } = await getManifest({
           globDirectory: buildOutputFolder,
           globPatterns: ['**/*'],
-          globIgnores: ['**/*.br', 'pwa-icons/**'],
+          globIgnores: ['**/*.br'],
           manifestTransforms: [rewriteManifestIndexHtmlUrl],
           maximumFileSizeToCacheInBytes: 100 * 1024 * 1024 // 100mb,
         });
@@ -723,6 +723,7 @@ export const vaadinConfig: UserConfigFn = (env) => {
       outDir: buildOutputFolder,
       emptyOutDir: devBundle,
       assetsDir: 'VAADIN/build',
+      target: ["esnext", "safari15"],
       rollupOptions: {
         input: {
           indexhtml: projectIndexHtml,
@@ -784,13 +785,7 @@ export const vaadinConfig: UserConfigFn = (env) => {
           presets: [['@babel/preset-react', { runtime: 'automatic', development: !productionMode }]],
           // React writes the source location for where components are used, this writes for where they are defined
           plugins: [
-            !productionMode && addFunctionComponentSourceLocationBabel(),
-            [
-              'module:@preact/signals-react-transform',
-              {
-                mode: 'all' // Needed to include translations which do not use something.value
-              }
-            ]
+            !productionMode && addFunctionComponentSourceLocationBabel()
           ].filter(Boolean)
         }
       }),
