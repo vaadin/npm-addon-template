@@ -2,14 +2,14 @@
   "dependencies": {
     "@axa-ch/input-text": "6.2.4",
     "@polymer/polymer": "3.5.2",
-    "@vaadin/bundles": "24.6.6",
+    "@vaadin/bundles": "24.6.7",
     "@vaadin/common-frontend": "0.0.19",
-    "@vaadin/polymer-legacy-adapter": "24.6.6",
-    "@vaadin/react-components": "24.6.6",
+    "@vaadin/polymer-legacy-adapter": "24.6.7",
+    "@vaadin/react-components": "24.6.7",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
-    "@vaadin/vaadin-lumo-styles": "24.6.6",
-    "@vaadin/vaadin-material-styles": "24.6.6",
-    "@vaadin/vaadin-themable-mixin": "24.6.6",
+    "@vaadin/vaadin-lumo-styles": "24.6.7",
+    "@vaadin/vaadin-material-styles": "24.6.7",
+    "@vaadin/vaadin-themable-mixin": "24.6.7",
     "@vaadin/vaadin-usage-statistics": "2.1.3",
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
@@ -64,14 +64,14 @@
     "dependencies": {
       "@axa-ch/input-text": "6.2.4",
       "@polymer/polymer": "3.5.2",
-      "@vaadin/bundles": "24.6.6",
+      "@vaadin/bundles": "24.6.7",
       "@vaadin/common-frontend": "0.0.19",
-      "@vaadin/polymer-legacy-adapter": "24.6.6",
-      "@vaadin/react-components": "24.6.6",
+      "@vaadin/polymer-legacy-adapter": "24.6.7",
+      "@vaadin/react-components": "24.6.7",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
-      "@vaadin/vaadin-lumo-styles": "24.6.6",
-      "@vaadin/vaadin-material-styles": "24.6.6",
-      "@vaadin/vaadin-themable-mixin": "24.6.6",
+      "@vaadin/vaadin-lumo-styles": "24.6.7",
+      "@vaadin/vaadin-material-styles": "24.6.7",
+      "@vaadin/vaadin-themable-mixin": "24.6.7",
       "@vaadin/vaadin-usage-statistics": "2.1.3",
       "construct-style-sheets-polyfill": "3.1.0",
       "date-fns": "2.29.3",
@@ -101,7 +101,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "18da9bec3a933d62fb5eb29e279ccf99d594b9dac9bdb34a4585b6464a08260e"
+    "hash": "197264f03a837324ac20ca63c034903f13533affde78a3bc09c2c0918bc04ee8"
   },
   "type": "module"
 }
