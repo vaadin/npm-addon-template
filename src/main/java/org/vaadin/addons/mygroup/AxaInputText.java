@@ -17,5 +17,21 @@ public class AxaInputText extends Component {
 
     public AxaInputText() {
         // Add server-side initialization code here
+        setMaxLenght(50);
+        setCounterText("Still ##counter## characters left");
+        setCounterMaxText("Over character limit!");
     }
+
+    public void setMaxLenght(int maxLenght) {
+        getElement().setAttribute("maxlength", ""+maxLenght);
+    }
+
+    public void setCounterText(String text) {
+        getElement().setAttribute("counter", text);
+    }
+
+    public void setCounterMaxText(String text) {
+        getElement().setAttribute("countermax", text);
+    }
+
 }
