@@ -34,7 +34,8 @@
     "typescript": "5.9.3",
     "vite": "7.3.2",
     "vite-plugin-checker": "0.12.0",
-    "workbox-build": "7.4.0"
+    "workbox-build": "7.4.0",
+    "@babel/types": "7.28.5"
   },
   "license": "UNLICENSED",
   "name": "no-name",
@@ -159,7 +160,8 @@
       "typescript": "5.9.3",
       "vite": "7.3.2",
       "vite-plugin-checker": "0.12.0",
-      "workbox-build": "7.4.0"
+      "workbox-build": "7.4.0",
+      "@babel/types": "7.28.5"
     },
     "hash": "fc984b24343c33755a2f5c25ec4b6037fc5d1e5a54b388cde8d57be801d36ea4"
   }
