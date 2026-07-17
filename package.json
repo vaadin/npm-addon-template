@@ -16,17 +16,17 @@
     "lit": "3.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router": "7.17.0"
+    "react-router": "7.18.1"
   },
   "devDependencies": {
-    "@babel/preset-react": "7.28.5",
-    "@babel/types": "7.28.6",
+    "@babel/preset-react": "7.29.7",
+    "@babel/types": "7.29.7",
     "@preact/signals-react-transform": "0.8.1",
     "@rollup/plugin-replace": "6.0.3",
-    "@rollup/pluginutils": "5.3.0",
-    "@types/react": "18.3.30",
+    "@rollup/pluginutils": "5.4.0",
+    "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
-    "@vitejs/plugin-react": "5.1.4",
+    "@vitejs/plugin-react": "5.2.0",
     "glob": "12.0.0",
     "magic-string": "0.30.21",
     "rollup-plugin-brotli": "3.1.0",
@@ -34,8 +34,8 @@
     "strip-css-comments": "5.0.0",
     "transform-ast": "2.4.4",
     "typescript": "5.9.3",
-    "vite": "7.3.5",
-    "vite-plugin-checker": "0.12.0"
+    "vite": "7.3.6",
+    "vite-plugin-checker": "0.14.4"
   },
   "license": "UNLICENSED",
   "name": "no-name",
@@ -135,17 +135,17 @@
       "lit": "3.3.3",
       "react": "18.3.1",
       "react-dom": "18.3.1",
-      "react-router": "7.17.0"
+      "react-router": "7.18.1"
     },
     "devDependencies": {
-      "@babel/preset-react": "7.28.5",
-      "@babel/types": "7.28.6",
+      "@babel/preset-react": "7.29.7",
+      "@babel/types": "7.29.7",
       "@preact/signals-react-transform": "0.8.1",
       "@rollup/plugin-replace": "6.0.3",
-      "@rollup/pluginutils": "5.3.0",
-      "@types/react": "18.3.30",
+      "@rollup/pluginutils": "5.4.0",
+      "@types/react": "18.3.31",
       "@types/react-dom": "18.3.7",
-      "@vitejs/plugin-react": "5.1.4",
+      "@vitejs/plugin-react": "5.2.0",
       "glob": "12.0.0",
       "magic-string": "0.30.21",
       "rollup-plugin-brotli": "3.1.0",
@@ -153,10 +153,10 @@
       "strip-css-comments": "5.0.0",
       "transform-ast": "2.4.4",
       "typescript": "5.9.3",
-      "vite": "7.3.5",
-      "vite-plugin-checker": "0.12.0"
+      "vite": "7.3.6",
+      "vite-plugin-checker": "0.14.4"
     },
-    "hash": "8c70eb3e586fe15bd94aa94730e26602b75b7bbe12424e06f32c09650ee6df17",
+    "hash": "75fcaa49e4eefdd5be6b7bfb8fe28e7d8e3c02be11284f3bf68d65f81f04d7c8",
     "overrides": {
       "@axa-ch/input-text": "$@axa-ch/input-text",
       "@polymer/polymer": "$@polymer/polymer",
